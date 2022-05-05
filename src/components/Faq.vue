@@ -20,7 +20,7 @@ export default {
             topicFaq: [
                 {
                     title: 'How many time zones are there in all?',
-                    value: 'Given a 24-hour day and 360 degrees of longitude around the Earth <a href="#" target="_blank">123</a>',
+                    value: 'Given a 24-hour day and 360 degrees of longitude around the Earth <a href="#" target="_blank">123</a><img src="https://picsum.photos/id/684/600/400" alt="">',
                 },
                 {
                     title: 'How long is a day and year on Venus?',
