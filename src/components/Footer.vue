@@ -24,7 +24,7 @@ export default {
 }
 .layout_grid {
     grid-template-columns: 1fr;
-    padding: 1rem 1rem 5rem;
+    padding: 0rem 1rem 4rem;
 }
 
 p {

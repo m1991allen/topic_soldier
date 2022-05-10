@@ -28,6 +28,17 @@ h1 {
     position: absolute;
 }
 
+.layout_grid {
+    width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+    .layout_grid {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 .layout p {
     text-align: left;
 }

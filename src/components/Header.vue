@@ -24,9 +24,9 @@
                     <!-- facebook -->
                     <a
                         target="_blank"
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2soldier&amp;src=sdkpreparse"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Fsoldier%2F&amp;src=sdkpreparse"
                         class="fb-xfbml-parse-ignore"
-                        ><span id="social_facebook"><i class="fa-brands fa-facebook-square fa-xl"> </i></span
+                        ><i class="fa-brands fa-facebook-square fa-xl"> </i
                     ></a>
 
                     <!-- localUrl -->
@@ -50,11 +50,11 @@ export default {
     methods: {
         scroll() {
             window.addEventListener('scroll', () => {
-                this.moveBar('black')
+                this.moveBar('#4d482e')
             })
         },
 
-        moveBar(color = '#0984e3') {
+        moveBar(color = '#4d482e') {
             let bar = document.querySelector('.progress')
             let w = Math.ceil(
                 (Math.round(window.pageYOffset) / (document.body.scrollHeight - window.innerHeight)) * 100

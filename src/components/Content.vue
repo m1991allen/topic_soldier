@@ -7,7 +7,7 @@
             </div>
             <div class="layout_grid_intro">
                 <h3>{{ item.title }}</h3>
-                <div v-html="item.description"></div>
+                <p v-html="item.description"></p>
             </div>
             <hr />
         </div>
@@ -19,10 +19,10 @@ export default {
     name: 'Intro',
     data() {
         return {
-            title: '台灣現況',
+            title: '台灣兵役現況',
             data: [
                 {
-                    img: require(`../assets/俄烏軍力.jpg`),
+                    img: require(`../assets/台灣兵力人數.jpg`),
                     title: `台灣兵力人數？`,
                     description: `台灣目前採「徵募併行」制度，職業軍人約有16.3萬人，其中陸海空軍分別約有8.8萬人、4萬人、3.5萬人，1994年1月1日以後出生的役男，則須接受4個月軍事訓練，完訓納入後備列管。然而立法院法制局發布報告顯示，國軍部分部隊已出現人力不足的情況，加上少子化趨勢，若兵役制度不變，到了2039年可召募的役男，只剩下5.6萬人。`,
                 },
@@ -37,17 +37,17 @@ export default {
                     description: `國防部2020年9月調整政策，恢復軍事訓練役「5+11」訓練，意指軍事訓練役完成5週入伍訓練後，即分發本、外島部隊，實施11週編制專長與實務工作訓練。國防部長邱國正表示，役男多了解部隊經驗是好事，比起過去訓完就回家，將有所助益。`,
                 },
                 {
-                    img: require(`../assets/民調.jpg`),
+                    img: require(`../assets/民眾支持兵役延長嗎.jpg`),
                     title: `民眾支持兵役延長嗎？`,
                     description: `根據台灣民意基金會3月22日公布的民調顯示，有76.8%受訪者認為，台灣役男只服4個月軍事訓練役不合理；至於役期是否延長至1年，則有75.9%受訪者支持。台灣民意基金會董事長游盈隆分析，民調結果顯示在中國武力威嚇下，加上烏克蘭情境效應，改革現行兵役制度已是社會共識。`,
                 },
                 {
-                    img: require(`../assets/民調.jpg`),
+                    img: require(`../assets/正反意見怎麼說.jpg`),
                     title: `正反意見怎麼說？`,
                     description: `時代力量立委邱顯智、王婉諭指出，4個月軍事訓練無法培養有戰力的後備軍人，應該將役期延長為1年，改革軍事訓練及教召訓練內容，並將女性納入多元化後備戰力。陸軍退役少將于北辰則認為「人多不一定能增加戰力」，拉長服役時間不如提升訓練質量，就現有體制讓軍力更精實、更穩固。`,
                 },
                 {
-                    img: require(`../assets/民調.jpg`),
+                    img: require(`../assets/俄烏軍力比一比.jpg`),
                     title: `從俄烏戰爭看「不對稱作戰」`,
                     description: `
                     <p>
@@ -58,7 +58,7 @@ export default {
                     </p>`,
                 },
                 {
-                    img: require(`../assets/俄烏軍力.jpg`),
+                    img: require(`../assets/海空戰力提升計畫.jpg`),
                     title: `台灣「不對稱作戰」優勢在哪裡？`,
                     description: `
                     <p>
@@ -69,7 +69,7 @@ export default {
                     </p>`,
                 },
                 {
-                    img: require(`../assets/俄烏軍力.jpg`),
+                    img: require(`../assets/兵役延長不只yn.jpg`),
                     title: `兵役延長不只 YES or NO`,
                     description: `
                     <p>
@@ -90,8 +90,7 @@ export default {
 <style scoped>
 hr {
     width: 100%;
-    border: 1px #d5d5d5 dashed;
-    margin: 2rem auto;
+    border: 2px #d5d5d5 dashed;
 }
 
 .layout {
@@ -124,6 +123,14 @@ hr {
     align-items: center;
     text-align: left;
     line-height: 1.6rem;
+    width: 700px;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .layout_grid .layout_grid_intro {
+        width: 100%;
+    }
 }
 
 p {

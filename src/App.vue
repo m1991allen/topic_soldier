@@ -193,7 +193,7 @@ a {
     --layout_background: #e7e4de;
     --layout_margin: auto;
     --layout_display: grid;
-    --layout_max_width: 800px;
+    --layout_max_width: 1000px;
     --layout_gap: 20px;
     --layout_padding: 1rem;
     --layout_margin: auto;
@@ -208,10 +208,10 @@ a {
     --font_h3: 1.4rem;
     --font_h4: 1.2rem;
     --font_h5: 1.1rem;
-    --font_h6: 1rem;
-    --font_p: 1rem;
+    --font_h6: 18px;
+    --font_p: 1.2rem;
     --font_span: 1rem;
-    --text_line_height: 1.5rem;
+    --text_line_height: 36px;
 
     --title_align: center;
     --text_align: left;
@@ -230,20 +230,28 @@ h2 {
     text-align: var(--title_align);
     margin: 1rem;
     padding: 2rem 0;
-    font-weight: 500;
+    font-weight: bolder;
 }
 
 h3 {
     font-size: var(--font_h3);
     text-align: var(--title_align);
-    padding: 2rem 0;
-    font-weight: bolder;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: var(--font_h4);
+    text-align: left;
+    padding: 1.5rem 0;
+    font-weight: bold;
 }
 
 p {
     text-align: var(--text_align);
     line-height: var(--text_line_height);
     margin: 1rem 0;
+    font-size: var(--font_p);
 }
 
 .layout {
@@ -256,5 +264,13 @@ p {
     margin: var(--layout_margin);
     padding: var(--layout_padding);
     grid-gap: var(--layout_gap);
+}
+
+.faq-wrapper {
+    margin: auto !important;
+}
+
+.accordion__title {
+    background-color: var(--layout_background);
 }
 </style>

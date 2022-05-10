@@ -14,16 +14,16 @@ export default {
         return {
             titles: [
                 {
-                    name: `台灣近況`,
-                    link: `#part_tw`,
+                    name: `台灣兵役現況`,
+                    link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_term=台灣兵役現況#part_tw`,
                 },
                 {
-                    name: `王立專題文章`,
-                    link: `#part_topic`,
+                    name: `王立專訪文章`,
+                    link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_term=王立專訪文章#part_topic`,
                 },
                 {
                     name: `相關新聞`,
-                    link: `#part_news`,
+                    link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_term=相關新聞#part_news`,
                 },
             ],
         }

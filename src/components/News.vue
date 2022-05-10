@@ -2,13 +2,18 @@
     <div class="layout" id="part_news">
         <h2><i class="fa-solid fa-newspaper"></i> {{ title }}</h2>
         <div class="layout_grid">
-            <div class="layout_grid_cover" v-for="item of 6" :key="item.id">
-                <img src="https://picsum.photos/id/695/320/200" />
-                <h3>Lorem ipsum dolor.</h3>
-                <p>22/04/30</p>
+            <div class="layout_grid_news" v-for="(news, index) of newsInfo" :key="index">
+                <a :href="'https://www.ftvnews.com.tw/news/detail/' + news.ID" target="_blank">
+                    <div class="grid_cover">
+                        <img :src="news.Image" />
+                    </div>
+                    <div class="grid_info">
+                        <h4>{{ news.Title }}</h4>
+                        <p>{{ news.CreateDate }}</p>
+                    </div>
+                </a>
             </div>
         </div>
-        <a href="javascript;">更多新聞</a>
     </div>
 </template>
 
@@ -17,8 +22,24 @@ export default {
     name: 'Intro',
     data() {
         return {
+            newsInfo: [],
             title: '相關新聞',
         }
+    },
+    mounted() {
+        // eslint-disable-next-line no-undef
+        axios
+            .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=兵役延長是與否&Page=1&sp=10')
+            .then((response) => {
+                console.log(response)
+                let data = response.data.ITEM
+                data.forEach((item) => {
+                    this.newsInfo.push(item)
+                })
+            })
+            .catch((error) => {
+                console.log('error' + error)
+            })
     },
 }
 </script>
@@ -44,34 +65,54 @@ export default {
     }
 }
 
-.layout_grid .layout_grid_intro {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.layout_grid_cover img {
+.layout_grid_news img {
     width: 100%;
 }
 
-a {
-    display: inline-block;
-    text-align: center;
-    margin: 1rem var(--layout_margin);
-    max-width: var(--layout_max_width);
-    color: var(--main_color);
-    border: 1px solid var(--main_color);
-    padding: var(--layout_padding);
+.layout_grid_news {
+    box-shadow: 1px 2px 3px #bcb9b9;
+}
+
+.layout_grid_news .grid_info h4 {
+    background-color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    max-height: 55px;
+    line-height: 2.3rem;
+    padding: 10px 1rem 25px;
+}
+
+.layout_grid_news .grid_info p {
+    margin: 0;
+    color: #737059;
+}
+
+.layout_grid_news .grid_cover img {
+    width: 100%;
+    filter: saturate(0.3);
     transition: 0.3s;
 }
 
-a:hover {
-    color: white;
-    background-color: var(--main_color);
+.layout_grid_news .grid_cover {
+    max-height: 160px;
+    overflow: hidden;
+}
+
+a {
+    color: black;
+}
+
+a:hover .grid_cover img {
+    filter: saturate(1);
 }
 
 p {
-    padding: 1rem;
     text-align: right;
+    padding-right: 1rem;
 }
 </style>
