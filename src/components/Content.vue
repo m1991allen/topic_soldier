@@ -2,12 +2,12 @@
     <div class="layout" id="part_tw">
         <h2><i class="fa-solid fa-person-rifle"></i> {{ title }}</h2>
         <div class="layout_grid" v-for="(item, index) of data" :key="index">
-            <div class="layout_grid_cover">
-                <img class="img" :src="item.img" />
-            </div>
             <div class="layout_grid_intro">
                 <h3>{{ item.title }}</h3>
                 <p v-html="item.description"></p>
+            </div>
+            <div class="layout_grid_cover">
+                <img class="img" :src="item.img" />
             </div>
             <hr />
         </div>
@@ -34,7 +34,7 @@ export default {
                 {
                     img: require(`../assets/四個月役男做什麼.jpg`),
                     title: `四個月役男做什麼？`,
-                    description: `國防部2020年9月調整政策，恢復軍事訓練役「5+11」訓練，意指軍事訓練役完成5週入伍訓練後，即分發本、外島部隊，實施11週編制專長與實務工作訓練。國防部長邱國正表示，役男多了解部隊經驗是好事，比起過去訓完就回家，將有所助益。`,
+                    description: `國防部2021年9月調整政策，恢復軍事訓練役「5+11」訓練，意指軍事訓練役完成5週入伍訓練後，即分發本、外島部隊，實施11週編制專長與實務工作訓練。國防部長邱國正表示，役男多了解部隊經驗是好事，比起過去訓完就回家，將有所助益。`,
                 },
                 {
                     img: require(`../assets/民眾支持兵役延長嗎.jpg`),
@@ -51,14 +51,14 @@ export default {
                     title: `從俄烏戰爭看「不對稱作戰」`,
                     description: `
                     <p>
-                        根據「global firepower」資料顯示，俄羅斯和烏克蘭軍力對比懸殊，但俄羅斯此次侵略行動卻頻頻受阻，關鍵就在於烏克蘭採取「不對稱作戰」。
+                        根據「global firepower」資料顯示，俄羅斯和烏克蘭軍力對比懸殊，但俄羅斯此次侵略行動卻頻頻受阻，外界認為關鍵就在於烏克蘭採取「不對稱作戰」。
                     </p>
                     <p>
-                        所謂「不對稱作戰」，意指利用天然優勢與敵人弱點，用最低成本獲得最大作戰成效，如烏克蘭憑藉外援飛彈，在地面與空中部隊相互協調下，帶給俄軍重大傷亡，也善用資訊及認知作戰，加劇國際反對入侵的聲浪，各種應對模式值得台灣借鏡。
+                        民視異言堂「兵役延長Yes or No？」專題指出，所謂「不對稱作戰」，意指利用天然優勢與敵人弱點，用最低成本獲得最大作戰成效。如烏克蘭憑藉外援飛彈，在地面與空中部隊相互協調下，帶給俄軍重大傷亡，或善用資訊及認知作戰，加劇國際反對入侵的聲浪，各種應對模式值得台灣借鏡。
                     </p>`,
                 },
                 {
-                    img: require(`../assets/海空戰力提升計畫.jpg`),
+                    img: require(`../assets/海空戰力計畫特別預算.jpg`),
                     title: `台灣「不對稱作戰」優勢在哪裡？`,
                     description: `
                     <p>
@@ -70,7 +70,7 @@ export default {
                 },
                 {
                     img: require(`../assets/兵役延長不只yn.jpg`),
-                    title: `兵役延長不只 YES or NO`,
+                    title: `兵役延長不只 YES or NO？`,
                     description: `
                     <p>
                         俄羅斯入侵烏克蘭，激發了台灣民眾的防衛決心，也帶動「兵役要不要延長」的話題。對此，總統府發言人張惇涵表示，評估兵役役期長度同時，必須加大訓練量能，更重要的是，訓練內容必須進行改革，讓軍事訓練能夠有效應對現代戰爭需求，強化國軍「不對稱作戰」的建軍思維。
@@ -101,10 +101,25 @@ hr {
     margin: 1rem auto;
 }
 
+.layout_grid:nth-of-type(1),
+.layout_grid:nth-of-type(5),
+.layout_grid:nth-of-type(8) {
+    grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 768px) {
-    .layout_grid {
+    .layout_grid,
+    .layout_grid:nth-of-type(1),
+    .layout_grid:nth-of-type(5),
+    .layout_grid:nth-of-type(8) {
         grid-template-columns: 1fr;
     }
+}
+
+.layout_grid:nth-of-type(1) .layout_grid_intro,
+.layout_grid:nth-of-type(5) .layout_grid_intro,
+.layout_grid:nth-of-type(8) .layout_grid_intro {
+    width: 100%;
 }
 
 .layout_grid_cover {

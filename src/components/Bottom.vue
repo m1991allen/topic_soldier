@@ -13,17 +13,29 @@ export default {
     data() {
         return {
             titles: [
+                // {
+                //     name: `台灣兵役現況`,
+                //     link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=topicpage&utm_term=台灣兵役現況#part_tw`,
+                // },
+                // {
+                //     name: `軍事國防Q&A`,
+                //     link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=topicpage&utm_term=王立專訪文章#part_topic`,
+                // },
+                // {
+                //     name: `相關新聞`,
+                //     link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=topicpage&utm_term=相關新聞#part_news`,
+                // },
                 {
                     name: `台灣兵役現況`,
-                    link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_term=台灣兵役現況#part_tw`,
+                    link: `#part_tw`,
                 },
                 {
-                    name: `王立專訪文章`,
-                    link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_term=王立專訪文章#part_topic`,
+                    name: `軍事國防Q&A`,
+                    link: `#part_topic`,
                 },
                 {
                     name: `相關新聞`,
-                    link: `https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_term=相關新聞#part_news`,
+                    link: `#part_news`,
                 },
             ],
         }

@@ -256,6 +256,7 @@ p {
 
 .layout {
     margin: 3rem var(--layout_margin) 0;
+    padding-top: 3rem;
 }
 
 .layout_grid {

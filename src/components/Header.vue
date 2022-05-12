@@ -38,8 +38,10 @@
 </template>
 
 <script>
+
 export default {
     name: 'Header',
+
     data() {
         return {
             title: `民視新聞網`,
@@ -69,7 +71,7 @@ export default {
 
         getLocalUrl() {
             let e = document.createElement('input'),
-                t = window.location.href + '?utm_source={{文字加在這}}&utm_medium=copybutton'
+                t = window.location.href + '?utm_source=topicpage&utm_medium=copybutton'
             document.body.appendChild(e),
                 (e.value = t),
                 e.select(),
@@ -78,11 +80,13 @@ export default {
                 alert('網址複製成功!')
         },
     },
+
     mounted() {
         this.scroll()
         this.moveBar()
     },
 }
+
 </script>
 
 <style scoped>

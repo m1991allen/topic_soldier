@@ -33,7 +33,7 @@ export default {
 .fa-angle-up {
     position: fixed;
     right: 1rem;
-    bottom: 1rem;
+    bottom: 4rem;
     border-radius: 5px;
     padding: 5px;
     background-color: #f7f7f5;

@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+.layout {
+    background-color: var(--layout_background);
+}
+
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;

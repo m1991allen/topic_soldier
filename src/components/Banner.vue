@@ -1,6 +1,6 @@
 <template>
     <div class="layout_inner">
-        <a href="https://www.ftvnews.com.tw/topics/soldier/?utm_source=web&utm_medium=click#part_tw">繼續了解</a>
+        <a href="	https://www.ftvnews.com.tw/topics/soldier/?utm_source=topicpage&utm_medium=click#part_tw">繼續了解</a>
         <picture>
             <source media="(max-width: 450px)" :srcset="banner_img.mobile" />
             <source media="(max-width: 768px)" :srcset="banner_img.tablet_ver" />

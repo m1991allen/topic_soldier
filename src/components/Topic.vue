@@ -1,6 +1,5 @@
 <template>
-    <div class="layout" id="part_topic">
-        <h2><i class="fa-solid fa-message-lines"></i> {{ title }}</h2>
+    <div class="layout">
         <div class="layout_grid block_1">
             <div class="layout_grid_news" v-for="(news, index) of news_top" :key="index">
                 <a :href="news.link" target="_blank"
@@ -33,7 +32,6 @@ export default {
     name: 'Intro',
     data() {
         return {
-            title: '王立專訪文章',
             news_top: [
                 {
                     cover: require('../assets/news_cover1.jpeg'),
@@ -69,10 +67,6 @@ export default {
 </script>
 
 <style scoped>
-.layout {
-    background-color: var(--layout_background);
-}
-
 .block_1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

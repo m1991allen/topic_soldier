@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 <template>
     <div class="layout" id="part_news">
         <h2><i class="fa-solid fa-newspaper"></i> {{ title }}</h2>
@@ -31,7 +32,6 @@ export default {
         axios
             .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=兵役延長是與否&Page=1&sp=10')
             .then((response) => {
-                console.log(response)
                 let data = response.data.ITEM
                 data.forEach((item) => {
                     this.newsInfo.push(item)
@@ -45,10 +45,6 @@ export default {
 </script>
 
 <style scoped>
-.layout {
-    background-color: var(--layout_background);
-}
-
 .layout_grid {
     grid-template-columns: 1fr 1fr 1fr;
 }
